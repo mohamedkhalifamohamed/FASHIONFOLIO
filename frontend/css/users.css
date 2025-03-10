@@ -1,0 +1,278 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line to space items */
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1; /* This makes the h1 take up remaining space */
+}
+
+.header .users-home {
+    color: #333;
+    text-decoration: none;
+    margin-left: auto; /* Ensure it's pushed to the right */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s;
+}
+
+.header .users-home:hover {
+    background-color: #EEE2DC;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #e3e3e3;
+}
+
+.user-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.user {
+    margin: 20px;
+    border-radius: 6px;
+    background-color: #455d7a;
+    width: calc(33.3% - 40px);
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 0 1px #ddd inset;
+    position: relative;
+}
+
+.user-avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    overflow: hidden;
+    font-size: 0;
+    margin-right: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  /* Ensures the image covers the entire avatar area */
+}
+
+.user-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.05) 1%,rgba(0,0,0,0) 100%);
+}
+
+.user-basic-info {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.user-fullname {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e3e3e3;
+    font-size: 23px;
+    font-weight: bold; /* Make text bold */
+}
+
+.user-id {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e3e3e3;
+    font-size: 20px;
+}
+.user-age {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e3e3e3;
+    font-size: 20px;
+}
+.user-gender {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e3e3e3;
+    font-size: 20px;
+}
+
+.user-nick {
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 2px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.user-data {
+    flex: 1;
+    white-space: nowrap;
+    text-align: right;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-left: 20px;
+}
+
+.user-info {
+    padding: 16px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.user-info + .user-info {
+    border-top: 1px solid #efefef;
+}
+
+.user-title {
+    font-size: 11px;
+    font-weight: bold;
+    color: rgba(0,0,0,0.4);
+    letter-spacing: 1px;
+}
+
+.user-remove {
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    right: 10px; /* Position to the right */
+    transform: translateY(20%); /* Center vertically */
+    border: 0;
+    background-color: #dc2f2f;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.user:hover .user-remove {
+    opacity: 1;
+}
+
+.user-view {
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    right: 10px; /* Position to the left */
+    transform: translateY(-100%); /* Center vertically */
+    border: 0;
+    background-color: #ff5722;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.user:hover .user-view {
+    opacity: 1;
+}
+@media (max-width: 800px) {
+    .user {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .user {
+        width: calc(100% - 40px);
+    }
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Form Styles */
+.add-user-form {
+    padding: 20px;
+    background-color: #2b4353;
+    color: white;
+    border-radius: 6px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.add-user-form h3 {
+    background-color: #333;
+    padding: 12px;
+    border-top-right-radius: 20px;
+    font-weight: bolder;
+    letter-spacing: .1em;
+    margin: 0 0 20px 0;
+}
+
+.add-user-form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-user-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-user-form .form-control:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+.add-user-form .btn-primary {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bolder;
+    letter-spacing: .2em;
+}
+
+.add-user-form .btn-primary:hover {
+    background-color: #555;
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FashionFolio - User's Outfits</title>
+    <link rel="stylesheet" href="../css/outfits-of-user.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="../assets/icons/home-icon.png" alt="Home Icon">
+    <h1>User Outfits</h1>
+    <a href="../index.html" class="users-home">Home</a>
+</header>
+
+<div class="container">
+    <div class="user-info">
+        <h2 id="user-name"></h2>
+    </div>
+    <div class="outfits-list">
+        <h3>Outfits</h3>
+        <div id="outfits-container"></div>
+    </div>
+    <div class="add-outfit">
+        <h3>Add New Outfit</h3>
+        <form id="addOutfitForm">
+            <div class="form-group">
+                <label for="outfitID">Outfit ID:</label>
+                <input class="form-control" type="text" id="outfitID" name="outfitID" placeholder="Outfit ID" required>
+            </div>
+            <button class="btn btn-primary form-control" type="submit">Add Outfit</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    &copy; Fashion Folio. All rights reserved.
+</footer>
+
+<script src="../scripts/outfits-of-user.js"></script>
+
+</body>
+</html>

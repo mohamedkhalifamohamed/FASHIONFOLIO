@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FashionFolio - Users</title>
+    <link rel="stylesheet" type="text/css" href="../css/users.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="../assets/icons/home-icon.png" alt="Home Icon">
+    <h1>Users</h1>
+    <a href="../index.html" class="users-home">Home</a>
+</header>
+
+<section class="main-content">
+    <h2 style="text-align: center;">Browse Through All Users Here!</h2>
+    <div class="user-list" id="app"></div>
+
+    <!-- New User Form Section -->
+    <div class="add-user-form">
+        <h3>ADD NEW USER</h3>
+        <form id="addUser" action="">
+            <div class="form-group">
+                <input class="form-control" type="text" name="first_name" placeholder="First Name" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="last_name" placeholder="Last Name" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="number" name="age" min="10" max="100" placeholder="Age" required>
+            </div>
+            <div class="form-group">
+                <select class="form-control" name="gender" required>
+                    <option value="" disabled selected>Select Gender</option>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="Non-Binary">Non-Binary</option>
+                </select>
+            </div>
+            <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+<footer class="footer">
+    &copy; Fashion Folio. All rights reserved
+</footer>
+
+<script src="../scripts/users.js"></script>
+
+</body>
+</html>

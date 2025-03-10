@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FashionFolio - Clothing Items of Outfit</title>
+    <link rel="stylesheet" href="../css/clothings-of-outfit.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="../assets/icons/home-icon.png" alt="Home Icon">
+    <h1>Clothing Items</h1>
+    <a href="../index.html" class="users-home">Home</a>
+</header>
+
+<div class="container">
+    <div class="outfit-info">
+        <h1 id="outfit-name"></h1>
+        <h2 id="outfit-occasion"></h2>
+    </div>
+    <div class="clothing-items-list">
+        <h2>Clothing Items</h2>
+        <div id="clothing-items-container"></div>
+    </div>
+    <div class="add-clothing-item">
+        <h3>Add New Clothing Item</h3>
+        <form id="addClothingItemForm">
+            <div class="form-group">
+                <label for="clothingItemID">Clothing Item ID:</label>
+                <input class="form-control" type="text" id="clothingItemID" name="clothingItemID" placeholder="Clothing Item ID" required>
+            </div>
+            <button class="btn btn-primary form-control" type="submit">Add Clothing Item</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    &copy; FashionFolio. All rights reserved.
+</footer>
+
+<script src="../scripts/clothing-items-of-outfit.js"></script>
+
+</body>
+</html>

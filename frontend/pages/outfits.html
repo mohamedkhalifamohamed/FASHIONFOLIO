@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FashionFolio - Outfits</title>
+    <link rel="stylesheet" type="text/css" href="../css/outfits.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="../assets/icons/home-icon.png" alt="Home Icon">
+    <h1>Outfits</h1>
+    <a href="../index.html" class="outfits-home">Home</a>
+</header>
+
+<section class="main-content">
+    <h2 style="text-align: center;">Browse Through All Outfits Here!</h2>
+    <div class="outfit-list" id="app"></div>
+
+    <!-- New Outfit Form Section -->
+    <div class="add-outfit-form">
+        <h3>ADD NEW OUTFIT</h3>
+        <form id="addOutfit" action="">
+            <div class="form-group">
+                <input class="form-control" type="text" name="name" placeholder="Outfit Name" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="occasion" placeholder="Occasion" required>
+            </div>
+            <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+<!-- Edit Outfit Modal -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Edit Outfit</h3>
+        <form id="editOutfit" action="">
+            <input type="hidden" name="outfitID">
+            <div class="form-group">
+                <input class="form-control" type="text" name="name" placeholder="Outfit Name" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="occasion" placeholder="Occasion" required>
+            </div>
+            <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    &copy; Fashion Folio. All rights reserved.
+</footer>
+
+<script src="../scripts/outfits.js"></script>
+
+</body>
+</html>

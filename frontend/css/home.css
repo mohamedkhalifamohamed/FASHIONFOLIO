@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line to space items */
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1; /* This makes the h1 take up remaining space */
+}
+
+.header .about-us {
+    color: #333;
+    text-decoration: none;
+    margin-left: auto; /* Ensure it's pushed to the right */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s;
+}
+
+.header .about-us:hover {
+    background-color: #EEE2DC;
+}
+
+.main-content-home {
+    padding: 20px;
+}
+
+.option-button {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    text-decoration: none;
+    color: #333;
+    background-color: transparent;
+    transition: background-color 0.5s;
+}
+
+.option-button:hover {
+    background-color: #748D92;
+}
+
+.option-button img {
+    width: 50px;
+    height: 50px;
+    margin-right: 20px;
+}
+
+.option-button h2 {
+    margin: 0;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}

@@ -1,0 +1,208 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line to space items */
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1; /* This makes the h1 take up remaining space */
+}
+
+.header .users-home {
+    color: #333;
+    text-decoration: none;
+    margin-left: auto; /* Ensure it's pushed to the right */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s;
+}
+
+.header .users-home:hover {
+    background-color: #EEE2DC;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+.user-info {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-info h1 {
+    font-size: 32px;
+    color: #333;
+}
+
+.user-info h2 {
+    font-size: 24px;
+    color: #666;
+}
+
+.outfits-list {
+    margin-bottom: 30px;
+}
+
+.outfits-list h3 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+/* Outfit Styles */
+.outfit {
+    margin: 20px;
+    border-radius: 6px;
+    background-color: #455d7a;
+    width: calc(33.3% - 40px);
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 0 1px #ddd inset;
+    position: relative;
+    cursor: pointer; /* Add cursor pointer for clickable outfits */
+}
+
+.outfit-basic-info {
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%,rgba(0,0,0,0.05) 1%,rgba(0,0,0,0) 100%);
+}
+
+.outfit-name, .outfit-occasion {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e3e3e3;
+    font-size: 20px;
+}
+
+.outfit-name {
+    font-size: 20px;
+}
+
+.outfit-occasion {
+    font-size: 20px;
+}
+
+.outfit img {
+    margin-right: 15px;
+}
+
+.outfit p {
+    margin: 0;
+    color: #333;
+}
+
+.outfit:hover {
+    background-color: #333;
+}
+
+/* Add these new styles for edit and delete buttons */
+.outfit button {
+    display: none;
+    position: absolute;
+    top: 10px;
+    padding: 5px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.outfit .edit-button {
+    right: 70px;
+    background-color: #007bff;
+    color: white;
+}
+
+.outfit .edit-button:hover {
+    background-color: #0056b3;
+}
+
+.outfit .delete-button {
+    right: 10px;
+    background-color: #dc3545;
+    color: white;
+}
+
+.outfit .delete-button:hover {
+    background-color: #c82333;
+}
+
+.outfit:hover button {
+    display: inline-block;
+}
+
+.add-outfit {
+    text-align: center;
+}
+
+.add-outfit h3 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.add-outfit form {
+    display: inline-block;
+    text-align: left;
+}
+
+.add-outfit label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.add-outfit input {
+    margin-bottom: 10px;
+    padding: 8px;
+    width: calc(100% - 16px);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.add-outfit button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.add-outfit button:hover {
+    background-color: #218838;
+}

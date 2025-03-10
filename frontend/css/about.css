@@ -1,0 +1,101 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Add this line to space items */
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1; /* This makes the h1 take up remaining space */
+}
+
+.header .start-now {
+    color: #333;
+    text-decoration: none;
+    margin-left: auto; /* Ensure it's pushed to the right */
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s;
+}
+
+.header .start-now:hover {
+    background-color: #EEE2DC;
+}
+
+.nav {
+    display: none; /* Hide the nav as it's no longer needed */
+}
+
+.main-content-about {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.about-option {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 2px solid #333;
+    border-radius: 5px;
+    background-color: #f9f9f9; /* Light background color */
+    transition: background-color 0.5s;
+}
+
+.about-option img {
+    width: 200px;
+    height: 135px;
+    margin-right: 20px;
+    border-radius: 5px;
+}
+
+.about-option div {
+    flex-grow: 3;
+    min-width: 300px;
+}
+
+.about-option h2 {
+    margin: 5px;
+    font-size: 1.2em;
+}
+
+.about-option p {
+    margin: 5px;
+    font-size: 0.9em;
+    color: #555;
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.full-width-image img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}

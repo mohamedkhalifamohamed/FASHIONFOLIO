@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FashionFolio - Clothing Items</title>
+    <link rel="stylesheet" type="text/css" href="../css/clothing-items.css">
+</head>
+<body>
+
+<header class="header">
+    <img src="../assets/icons/home-icon.png" alt="Home Icon">
+    <h1>Clothing Items</h1>
+    <a href="../index.html" class="clothing-items-home">Home</a>
+</header>
+
+<section class="main-content">
+    <h2 style="text-align: center;">Browse Through All Clothing Items Here!</h2>
+    <div class="clothing-item-list" id="app"></div>
+
+    <!-- New Clothing Item Form Section -->
+    <div class="add-clothing-item-form">
+        <h3>ADD NEW CLOTHING ITEM</h3>
+        <form id="addClothingItem" action="">
+            <div class="form-group">
+                <input class="form-control" type="text" name="type" placeholder="Type" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="color" placeholder="Color" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="brand" placeholder="Brand" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="imageLink" placeholder="Image Link" required>
+            </div>
+            <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+        </form>
+    </div>
+</section>
+
+<!-- Edit Clothing Item Modal -->
+<div id="editModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h3>Edit Clothing Item</h3>
+        <form id="editClothingItem" action="">
+            <input type="hidden" name="clothingItemID">
+            <div class="form-group">
+                <input class="form-control" type="text" name="type" placeholder="Type" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="color" placeholder="Color" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="brand" placeholder="Brand" required>
+            </div>
+            <div class="form-group">
+                <input class="form-control" type="text" name="imageLink" placeholder="Image Link" required>
+            </div>
+            <button class="btn btn-primary form-control" type="submit">SUBMIT</button>
+        </form>
+    </div>
+</div>
+
+<footer class="footer">
+    &copy; Fashion Folio. All rights reserved.
+</footer>
+
+<script src="../scripts/clothing-items.js"></script>
+
+</body>
+</html>

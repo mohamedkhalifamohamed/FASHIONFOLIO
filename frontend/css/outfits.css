@@ -1,0 +1,321 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #222;
+    color: white;
+    padding: 10px 20px;
+}
+
+.header img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.header h1 {
+    margin: 0;
+    flex-grow: 1;
+}
+
+.header .outfits-home {
+    color: #333;
+    text-decoration: none;
+    margin-left: auto;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.5s;
+}
+
+.header .outfits-home:hover {
+    background-color: #EEE2DC;
+}
+
+.main-content {
+    padding: 20px;
+    background-color: #e3e3e3;
+}
+
+.outfit-list {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.outfit {
+    margin: 20px;
+    border-radius: 6px;
+    background-color: #455d7a;
+    width: calc(33.3% - 40px);
+    overflow: hidden;
+    box-shadow: 0 5px 10px rgba(0,0,0,.05), 0 0 0 1px #ddd inset;
+    position: relative;
+}
+
+.outfit-header {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.05) 0%, rgba(0,0,0,0.05) 1%, rgba(0,0,0,0) 100%);
+}
+
+.outfit-basic-info {
+    flex: 1;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.outfit-name {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e3e3e3;
+    font-size: 23px;
+    font-weight: bold;
+}
+
+.outfit-id, .outfit-occasion {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #e3e3e3;
+    font-size: 20px;
+}
+
+.outfit-actions {
+    padding: 16px 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 15px;
+}
+
+.outfit-remove {
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    right: 10px;
+    transform: translateY(-50%);
+    border: 0;
+    background-color: #dc2f2f;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.outfit-edit {
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    right: 10px; /* Position to the right */
+    transform: translateY(70%); /* Center vertically */
+    border: 0;
+    background-color: #2f7edc;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.outfit-view {
+    position: absolute;
+    top: 50%;
+    transition: .3s;
+    right: 10px; /* Position to the left */
+    transform: translateY(-170%); /* Center vertically */
+    border: 0;
+    background-color: #ff5722;
+    padding: 10px;
+    border-radius: 10px;
+    color: #fff;
+    opacity: 0;
+    outline: 0;
+    cursor: pointer;
+}
+
+.outfit-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.outfit:hover .outfit-remove, .outfit:hover .outfit-edit, .outfit:hover .outfit-view {
+    opacity: 1;
+}
+
+@media (max-width: 800px) {
+    .outfit {
+        width: calc(50% - 40px);
+    }
+}
+
+@media (max-width: 600px) {
+    .outfit {
+        width: calc(100% - 40px);
+    }
+}
+
+.footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+/* Form Styles */
+.add-outfit-form {
+    padding: 20px;
+    background-color: #2b4353;
+    color: white;
+    border-radius: 6px;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+.add-outfit-form h3 {
+    background-color: #333;
+    padding: 12px;
+    border-top-right-radius: 20px;
+    font-weight: bolder;
+    letter-spacing: .1em;
+    margin: 0 0 20px 0;
+}
+
+.add-outfit-form .form-group {
+    margin-bottom: 15px;
+}
+
+.add-outfit-form .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.add-outfit-form .form-control:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+.add-outfit-form .btn-primary {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bolder;
+    letter-spacing: .2em;
+}
+
+.add-outfit-form .btn-primary:hover {
+    background-color: #555;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.4);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    animation: showModal 0.3s ease-in-out;
+}
+
+@keyframes showModal {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h3 {
+    margin-top: 0;
+}
+
+.modal .form-group {
+    margin-bottom: 15px;
+}
+
+.modal .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+.modal .form-control:focus {
+    border-color: #66afe9;
+    outline: none;
+}
+
+.modal .btn-primary {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    width: 100%;
+    font-weight: bolder;
+    letter-spacing: .2em;
+}
+
+.modal .btn-primary:hover {
+    background-color: #555;
+}
